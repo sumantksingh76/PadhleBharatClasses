@@ -495,6 +495,109 @@ h2 {
     margin-top: auto;
 }
 
+/* Pricing Section */
+.pricing {
+    background-color: var(--bg-dark);
+}
+
+.pricing-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--text-main);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeEffect 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+    text-align: center;
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-table th {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary-light);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.pricing-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.pricing-notes {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.pricing-notes h4 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-notes ul {
+    list-style-type: none;
+}
+
+.pricing-notes li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    color: var(--text-muted);
+}
+
+.pricing-notes li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-light);
+}
+
 /* Special Prep */
 .special {
     background-color: var(--bg-darker);

@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Scroll Animation Observer
-    const faders = document.querySelectorAll('.feature-card, .course-card, .special-text, .contact-card');
+    const faders = document.querySelectorAll('.feature-card, .course-card, .special-text, .contact-card, .table-responsive, .pricing-notes');
     
     // Add fade-in class initially
     faders.forEach(fader => {
@@ -66,3 +66,24 @@ document.addEventListener('DOMContentLoaded', () => {
         appearOnScroll.observe(fader);
     });
 });
+
+// Pricing Tabs function (Global)
+function openTab(evt, tabName) {
+    let i, tabcontent, tablinks;
+    
+    // Hide all tab contents
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+    }
+    
+    // Remove active class from all tab buttons
+    tablinks = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+    
+    // Show current tab and add active class to button
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
