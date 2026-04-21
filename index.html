@@ -254,42 +254,84 @@
         </div>
     </section>
 
-    <!-- Contact & Footer Section -->
+    <!-- Contact & Join Section -->
     <section id="contact" class="contact section">
         <div class="container">
-            <div class="contact-card glass-card">
-                <div class="director-info">
-                    <div class="director-avatar">
-                        <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <div>
-                        <p class="label">Director</p>
-                        <h3>Mukul Kr. Gupta</h3>
-                        <p class="degrees">B.Sc, M.Sc</p>
-                    </div>
+            <div class="section-title">
+                <h2>Contact & Join Us</h2>
+                <p>Enroll today or get in touch with us</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Join Now Form -->
+                <div class="join-form-card glass-card">
+                    <h3>Join Now</h3>
+                    <p class="form-desc">Fill the details below to send an enquiry directly to the director.</p>
+                    <form id="joinForm" class="join-form">
+                        <div class="form-group">
+                            <label for="studentName">Student Name</label>
+                            <input type="text" id="studentName" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentClass">Class</label>
+                            <select id="studentClass" required>
+                                <option value="" disabled selected>Select Class</option>
+                                <option value="Nur to KG">Nur to KG</option>
+                                <option value="1st to 5th">1st to 5th</option>
+                                <option value="6th to 8th">6th to 8th</option>
+                                <option value="9th to 10th">9th to 10th</option>
+                                <option value="11th to 12th">11th to 12th</option>
+                                <option value="Competition Batch">Competition Batch</option>
+                                <option value="Grammar Batch">Grammar Batch</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" id="phoneNumber" placeholder="Enter phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Address / Message</label>
+                            <textarea id="message" rows="3" placeholder="Enter your address or message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Details <i class="fa-brands fa-whatsapp"></i></button>
+                    </form>
                 </div>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+
+                <!-- Contact Details -->
+                <div class="contact-card glass-card">
+                    <div class="director-info">
+                        <div class="director-avatar">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
                         <div>
-                            <h4>Call Us</h4>
-                            <p>8102154421</p>
-                            <p>7759816092</p>
+                            <p class="label">Director</p>
+                            <h3>Mukul Kr. Gupta</h3>
+                            <p class="degrees">B.Sc, M.Sc</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="icon"><i class="fa-brands fa-youtube"></i></div>
-                        <div>
-                            <h4>YouTube</h4>
-                            <p><a href="#" target="_blank">@PadhleBharat</a></p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>8102154421</p>
+                                <p>7759816092</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <div>
-                            <h4>Address</h4>
-                            <p>Bhore Road, Ramdas,</p>
-                            <p>Bagahi Bazar, Gopalganj</p>
+                        <div class="contact-item">
+                            <div class="icon"><i class="fa-brands fa-youtube"></i></div>
+                            <div>
+                                <h4>YouTube</h4>
+                                <p><a href="#" target="_blank">@PadhleBharat</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Bhore Road, Ramdas,</p>
+                                <p>Bagahi Bazar, Gopalganj</p>
+                            </div>
                         </div>
                     </div>
                 </div>

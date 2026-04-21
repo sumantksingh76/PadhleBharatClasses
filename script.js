@@ -87,3 +87,35 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).classList.add("active");
     evt.currentTarget.classList.add("active");
 }
+
+// WhatsApp Join Form Submission
+const joinForm = document.getElementById('joinForm');
+if (joinForm) {
+    joinForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('studentName').value;
+        const studentClass = document.getElementById('studentClass').value;
+        const phone = document.getElementById('phoneNumber').value;
+        const message = document.getElementById('message').value;
+        
+        // Format the message
+        const whatsappMessage = `*New Admission Enquiry* 🎓\n\n*Name:* ${name}\n*Class:* ${studentClass}\n*Phone:* ${phone}\n*Address/Message:* ${message}`;
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        
+        // Director's WhatsApp number
+        const whatsappNumber = '918102154421';
+        
+        // Create WhatsApp URL
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        
+        // Open in new tab
+        window.open(whatsappUrl, '_blank');
+        
+        // Reset form
+        joinForm.reset();
+    });
+}

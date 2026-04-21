@@ -665,28 +665,99 @@ h2 {
     border-radius: 15px;
 }
 
-/* Contact */
+/* Contact & Join Form */
 .contact {
     background: var(--bg-dark);
 }
 
-.contact-card {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-    justify-content: space-between;
+    align-items: start;
+}
+
+.join-form-card,
+.contact-card {
+    height: 100%;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.join-form-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: var(--primary-light);
+}
+
+.form-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-main);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23cbd5e1%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 12px auto;
+}
+
+.form-group select option {
+    background: var(--bg-dark);
+    color: var(--text-main);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.2);
+}
+
+.w-100 {
+    width: 100%;
 }
 
 .director-info {
-    flex: 1;
-    min-width: 250px;
     display: flex;
     align-items: center;
     gap: 20px;
-    padding-right: 30px;
-    border-right: 1px solid var(--border-color);
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .director-avatar {
@@ -716,8 +787,6 @@ h2 {
 }
 
 .contact-details {
-    flex: 1.5;
-    min-width: 300px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -812,11 +881,17 @@ footer p {
         display: none;
     }
 
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
     .director-info {
         border-right: none;
         border-bottom: 1px solid var(--border-color);
         padding-bottom: 30px;
         padding-right: 0;
+        flex-direction: column;
+        text-align: center;
     }
 }
 
