@@ -37,33 +37,82 @@
 
     <!-- Hero Section -->
     <header id="home" class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h3 class="subtitle">शिक्षा हमारे राष्ट्र की नींव है...</h3>
-                <h1 class="main-title">जब कम्पटीशन ही है भविष्य तो क्यों ना करें बचपन से ही तैयारी</h1>
-                <p class="description">
-                    Empowering students with quality education. Join us for comprehensive classes from 1st to 12th and
-                    competitive exam preparations.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Join Today</a>
-                    <a href="#courses" class="btn btn-secondary">Explore Courses</a>
+        <div class="hero-slider">
+            <div class="slider-track" id="sliderTrack">
+                <!-- Slide 1 -->
+                <div class="hero-slide active">
+                    <div class="container hero-container">
+                        <div class="hero-content">
+                            <h3 class="subtitle">शिक्षा हमारे राष्ट्र की नींव है...</h3>
+                            <h1 class="main-title">जब कम्पटीशन ही है भविष्य तो क्यों ना करें बचपन से ही तैयारी</h1>
+                            <p class="description">
+                                Empowering students with quality education. Join us for comprehensive classes from 1st
+                                to
+                                12th and
+                                competitive exam preparations.
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="#contact" class="btn btn-primary">Join Today</a>
+                                <a href="#courses" class="btn btn-secondary">Explore Courses</a>
+                            </div>
+                            <div class="location-badge">
+                                <i class="fa-solid fa-location-dot"></i> Bagahi Bazar, Gopalganj
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <div class="image-wrapper glass">
+                                <img src="assets/hero_illustration.png" alt="Educational Illustration">
+                                <div class="floating-badge badge-1">
+                                    <i class="fa-solid fa-star"></i> Top Results
+                                </div>
+                                <div class="floating-badge badge-2">
+                                    <i class="fa-solid fa-graduation-cap"></i> Expert Faculty
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="location-badge">
-                    <i class="fa-solid fa-location-dot"></i> Bagahi Bazar, Gopalganj
+
+                <!-- Slide 2 -->
+                <div class="hero-slide">
+                    <div class="container hero-container">
+                        <div class="hero-content">
+                            <h3 class="subtitle">Our 1st Parent-Teacher Meeting!</h3>
+                            <h1 class="main-title">Registration is Now Open for the Upcoming Session</h1>
+                            <p class="description">
+                                We believe in strong parent-teacher collaboration for the bright future of our students.
+                                Enroll your child today and be part of our 1st PTM!
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="#contact" class="btn btn-primary">Register Now</a>
+                                <a href="#courses" class="btn btn-secondary">Explore Courses</a>
+                            </div>
+                            <div class="location-badge">
+                                <i class="fa-solid fa-calendar-check"></i> Admissions Open
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <div class="image-wrapper glass">
+                                <a href="https://youtu.be/b7NuMw9c8qA?si=zDiwFSp9cuhNC5LE" target="_blank">
+                                    <img src="assets/ptm_banner.jpg" alt="1st PTM Registration Going On">
+                                </a>
+                                <div class="floating-badge badge-1">
+                                    <i class="fa-solid fa-lightbulb"></i> Innovative Learning
+                                </div>
+                                <div class="floating-badge badge-2">
+                                    <i class="fa-solid fa-users"></i> Interactive Batches
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="image-wrapper glass">
-                    <img src="assets/hero_illustration.png" alt="Educational Illustration">
-                    <div class="floating-badge badge-1">
-                        <i class="fa-solid fa-star"></i> Top Results
-                    </div>
-                    <div class="floating-badge badge-2">
-                        <i class="fa-solid fa-graduation-cap"></i> Expert Faculty
-                    </div>
-                </div>
-            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <div class="slider-dot active" onclick="setSlide(0)"></div>
+            <div class="slider-dot" onclick="setSlide(1)"></div>
         </div>
         <div class="wave-bottom">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
@@ -317,8 +366,8 @@
                 <h4><i class="fa-solid fa-circle-info"></i> Important Notes</h4>
                 <ul>
                     <li>नोट-प्रत्येक माह का फीस उसी माह के 10 तारीख तक जमा कर दें | अन्यथा लेट फाईन देय होगा |</li>
-                    <li>जमा की गयी राशि किसी भी कारणवश लौटायी नही जायेगी |</li>
                     <li>Pay Every month fee up to date 10th of the same month otherwise late fine will be charged.</li>
+                    <li>जमा की गयी राशि किसी भी कारणवश लौटायी नही जायेगी |</li>
                     <li>Any fee paid is not refunded or transferred due to any reason or cases.</li>
                 </ul>
             </div>
@@ -344,7 +393,7 @@
                     </ul>
                 </div>
                 <div class="special-image glass">
-                    <img src="assets/students_studying.png" alt="Students studying together">
+                    <img src="assets/competitive_exams.png" alt="Students preparing for competitive exams">
                 </div>
             </div>
         </div>

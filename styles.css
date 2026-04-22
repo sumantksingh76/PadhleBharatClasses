@@ -212,15 +212,67 @@ h2 {
     cursor: pointer;
 }
 
-/* Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 80px;
+    padding-top: 100px;
+    padding-bottom: 80px;
     background: radial-gradient(circle at top right, rgba(79, 70, 229, 0.15), transparent 40%),
         radial-gradient(circle at bottom left, rgba(14, 165, 233, 0.1), transparent 40%);
+}
+
+.hero-slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    will-change: transform;
+}
+
+.hero-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    opacity: 0.4;
+    transition: opacity 0.8s ease;
+    transform: scale(0.95);
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.slider-dot.active,
+.slider-dot:hover {
+    background: var(--primary-light);
+    transform: scale(1.3);
 }
 
 .hero-container {
@@ -519,7 +571,8 @@ h2 {
     transition: var(--transition);
 }
 
-.tab-btn.active, .tab-btn:hover {
+.tab-btn.active,
+.tab-btn:hover {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     border-color: transparent;
     box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
@@ -535,8 +588,15 @@ h2 {
 }
 
 @keyframes fadeEffect {
-    from {opacity: 0; transform: translateY(10px);}
-    to {opacity: 1; transform: translateY(0);}
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .table-responsive {
@@ -551,7 +611,8 @@ h2 {
     text-align: center;
 }
 
-.pricing-table th, .pricing-table td {
+.pricing-table th,
+.pricing-table td {
     padding: 15px;
     border-bottom: 1px solid var(--border-color);
 }

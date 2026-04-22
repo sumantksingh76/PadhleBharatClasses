@@ -119,3 +119,56 @@ if (joinForm) {
         joinForm.reset();
     });
 }
+
+// Hero Slider Logic
+let currentSlide = 0;
+let slideInterval;
+
+function initSlider() {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length > 0) {
+        startSlideTimer();
+    }
+}
+
+function setSlide(index) {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    const track = document.getElementById('sliderTrack');
+    
+    // Reset timer
+    clearInterval(slideInterval);
+    
+    // Remove active classes
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Set active class
+    currentSlide = index;
+    if (slides[currentSlide]) slides[currentSlide].classList.add('active');
+    if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+    
+    // Move track
+    if (track) {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    // Restart timer
+    startSlideTimer();
+}
+
+function nextSlide() {
+    const slides = document.querySelectorAll('.hero-slide');
+    let nextIndex = currentSlide + 1;
+    if (nextIndex >= slides.length) {
+        nextIndex = 0;
+    }
+    setSlide(nextIndex);
+}
+
+function startSlideTimer() {
+    slideInterval = setInterval(nextSlide, 10000); // 10 seconds
+}
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', initSlider);
